@@ -7,18 +7,20 @@ import { MainComponent } from './components/main/presentation/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductComponent } from './components/product/presentation/product.component';
 import { BasketComponent } from './components/basket/presentation/basket.component';
+import { ProductModule } from './components/product/product.module';
+import { MainModule } from './components/main/main.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
-    ProductComponent,
     BasketComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ProductModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]

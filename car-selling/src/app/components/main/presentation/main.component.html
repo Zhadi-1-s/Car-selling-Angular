@@ -15,7 +15,9 @@
         <div id="header">
             <h2>Car store</h2>
             <div id="logo">
-                Porche
+                <ul *ngFor="let logo of logotips">
+                        {{logo.name}}
+                </ul>
             </div>
         </div>
         <div id="gif">

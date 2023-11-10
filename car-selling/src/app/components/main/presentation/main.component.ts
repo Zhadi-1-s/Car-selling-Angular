@@ -1,5 +1,7 @@
 import { Component,OnInit,OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { LogoEntityService } from '../state/logo-entity.service';
+import { Logotip } from '../models/logotip';
 
 @Component({
   selector: 'app-main',
@@ -8,18 +10,20 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit{
 
-  constructor(){
+  logotips!:Logotip|any|null
+
+  constructor(private logoService:LogoEntityService){
     
   }
 
-  array = [
-    {"name":"John"},{"name":"Alex"}
-  ]
-
   ngOnInit(): void {
-      localStorage.setItem('name',JSON.stringify(this.array));
-      console.log(this.array)
-      console.log('passed data to local Storage')
+    this.logoService.getLogotips().subscribe(
+      data => {
+        this.logotips = data;
+        console.log('data taked succesfully')
+        console.log(data)
+      }
+    )
   }
 
 }
