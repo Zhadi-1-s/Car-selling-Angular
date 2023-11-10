@@ -34,19 +34,17 @@ nav .check h1{
     margin-top: 18px;
 }
 .description{
-    width: 900px;
+    width: 920px;
     height: 400px;
     position: relative;
     top: 20px;
-    left: 21%;
+    left:300px;
     display: flex;
     flex-direction: row;
-    border: solid 3px;
 }
 #header{
     height: 35px;
     width: 500px;
-    
     margin-top: 25px;
 }
 #header h2{
@@ -56,7 +54,7 @@ nav .check h1{
 }
 #gif{
     margin-top: 35px;
-    width: 780px;
+    width: 720px;
     margin-left:20px;
 }
 #gif img{
@@ -69,5 +67,20 @@ nav .check h1{
     background-color: rgb(233, 231, 231); 
     margin-left: 20px;
     width: 350px;
-    height: 285px;
+    height: 305px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#carNames{
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #252525;
+    color: white;
+    transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+#carNames:hover{
+    transform: scale(1.025);
+    cursor: pointer;
 }

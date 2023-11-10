@@ -15,9 +15,14 @@
         <div id="header">
             <h2>Car store</h2>
             <div id="logo">
-                <ul *ngFor="let logo of logotips">
-                        {{logo.name}}
+                <ul *ngFor="let logo of logotips" style="margin-top: 10px;">
+                        <div id="carNames">
+                            <span>{{logo.name}}</span>
+                        </div>
                 </ul>
+                <div style="position: relative;left: 110px;">
+                    <button mat-raised-button color="primary">Add to filter</button>
+                </div>
             </div>
         </div>
         <div id="gif">
