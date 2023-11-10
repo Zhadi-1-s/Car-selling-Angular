@@ -9,7 +9,6 @@ export class BasketComponent implements OnInit {
   
   constructor(){}
   
-
   ngOnInit(): void {
       const result = localStorage.getItem('name')
       
