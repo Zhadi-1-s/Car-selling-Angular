@@ -67,7 +67,7 @@ nav .check h1{
     background-color: rgb(233, 231, 231); 
     margin-left: 20px;
     width: 350px;
-    height: 305px;
+    height: 285px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }

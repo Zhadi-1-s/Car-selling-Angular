@@ -3,11 +3,12 @@ import { Injectable } from '@angular/core';
 import { Logotip } from '../models/logotip';
 
 import { Observable,of } from 'rxjs';
+import { BaseService } from 'src/app/core/services/servis-entity';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LogoEntityService {
+export class LogoEntityService implements BaseService<Logotip>{
   
   logotips: Logotip[] = [
     {id:1,name:'Porche'},
@@ -24,7 +25,7 @@ export class LogoEntityService {
 
   constructor() { }
 
-  getLogotips():Observable<any>{
+  getData():Observable<Logotip[]>{
       return of(this.logotips)
   }
 

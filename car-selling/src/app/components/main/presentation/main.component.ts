@@ -13,11 +13,11 @@ export class MainComponent implements OnInit{
   logotips!:Logotip|any|null
 
   constructor(private logoService:LogoEntityService){
-    
+      
   }
 
   ngOnInit(): void {
-    this.logoService.getLogotips().subscribe(
+    this.logoService.getData().subscribe(
       data => {
         this.logotips = data;
         console.log('data taked succesfully')
